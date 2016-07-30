@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Endpoint Django</title>
+    
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <script src="{% static 'js/get_users.js' %}"></script>
+</head>
+<body style="padding: 4em; text-align: center; margin-top: 5em;">
+    <h1>Api Test To Get All Users</h1>
+    <button type="button" id="btn_request" style="font-size: 1.35em; background-color: #e0e0e0; margin-right: 12px; margin-left: 20px">POST</button>
+    <button type="button" id="btn_clear" style="font-size: 1.35em; background-color: #e0e0e0">CLEAR</button>
+
+    <form action="" method="post">{% csrf_token %}
+        <input type="hidden">
+    </form>
+
+    <div class="content">
+    </div>
+</body>
+</html>
