@@ -11,8 +11,9 @@ class GetUsers(APIView):
         return Response(serializer.data)
 
 class GetUserById(APIView):
-    def post(self, request, id, format=None):
-        user = models.User.objects.filter(pk=id)
+    def post(self, request, format=None):
+        _id = request.POST.get("id")
+        user = models.User.objects.filter(pk=_id)
         serializer = serializers.UserSerializer(user, many=True)
         return Response(serializer.data)
 
