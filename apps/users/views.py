@@ -33,6 +33,6 @@ def get_user_by_id(request, id):
         print(user_by_id)
         return JsonResponse(json.loads(serializers.serialize("json", user_by_id)), safe=False)
 
-    return render(request, "get_users.html")
+    return JsonResponse({"msg": "error"})
 
 
