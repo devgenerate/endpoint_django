@@ -11,7 +11,10 @@
 <body style="padding: 4em; text-align: center; margin-top: 5em;">
     <h1>Api Test To Get All Users</h1>
     <button type="button" id="btn_request" style="font-size: 1.35em; background-color: #e0e0e0; margin-right: 12px; margin-left: 20px">POST</button>
-    <button type="button" id="btn_clear" style="font-size: 1.35em; background-color: #e0e0e0">CLEAR</button>
+    <button type="button" id="btn_clear" style="font-size: 1.35em; background-color: #e0e0e0">CLEAR</button><br><br>
+
+    <button type="button" id="btn_request_by_id" style="font-size: 1.35em; background-color: #e0e0e0">GET BY ID</button>
+    <input type="text" id="input_id" placeholder="id for user">
 
     <form action="" method="post">{% csrf_token %}
         <input type="hidden">
